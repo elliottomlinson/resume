@@ -9,40 +9,46 @@
  \/____/\/____/\/____/ \/_/\/___/  \/__/ \/__/\/___/  \/_/\/_/\/_/\/____/ \/_/\/_/\/_/\/___/  \/___/  \/_/\/_/
 
 Elliot Tomlinson
- email:   tomlie1@mcmaster.ca
- cell:    (905) 537 - 6744
- lnkdn:   https://linkedin.com/in/elliottomlinson
- site:    https://elliot.tk
+ email     tomlie1@mcmaster.ca
+ cell      (905) 537 - 6744
+ linkedin  https://linkedin.com/in/elliottomlinson
+ github    https://github.com/elliottomlinson
+ site      https://elliot.tk
 
 }
 
 %% --- custom stylesheet ------------------------------------------------------------------------------------------
-  \newenvironment{resume}{\normalsize\begin{tabular}{p{2.6924cm}p{14.1986cm}}}{\end{tabular}}
-  \newenvironment{contactinfo}{\\\small\begin{tabular}{l|l}}{\end{tabular}}
-  \newcommand{\resumename}{\centering\huge\textbf}
-  \newcommand{\resumedate}{\color{gray}\textsl}
-  \newcommand{\resumesection}{\\\large}
-  \newcommand{\desc}{\\&}
+    \newenvironment{resume}{\normalsize\begin{tabular}{p{2.6924cm}p{14.1986cm}}}{\end{tabular}\vspace{0.15cm}}
+    \newenvironment{contactinfo}{\\\small\vspace{-0.1cm}\begin{tabular}{l|l}}{\end{tabular}\vspace{0.15cm}}
+    \newcommand{\codenote}{\color{gray}\vspace{0.2cm}\small\textsl}
+    \newcommand{\resumedate}{\small\color{gray}\textsl}
+    \newcommand{\resumename}{\centering\huge\textbf}
+    \newcommand{\links}{\vspace{0.35cm}\small}
+    \newcommand{\resumesection}{\\\large}
+    \newcommand{\desc}{\\&}
 
 %% --- initialization ---------------------------------------------------------------------------------------------
-  \documentclass{article}
-  \usepackage[left=1.8cm, right=1.8cm, bottom=1cm, top=2cm]{geometry}
-  \usepackage[utf8]{inputenc}
-  \usepackage{hyperref}
-  \usepackage{xcolor}
-  \begin{document}
-  \begin{center}
+    \documentclass{article}
+    \usepackage[left=1.8cm, right=1.8cm, bottom=1cm, top=1.8cm]{geometry}
+    \usepackage[utf8x]{inputenc}
+    \usepackage{fontawesome}
+    \usepackage{setspace}
+    \usepackage{hyperref}
+    \usepackage{xcolor}
+    \begin{document}
+    \begin{center}
 
 %% --- header -----------------------------------------------------------------------------------------------------
 \resumename{Elliot Tomlinson}
 \begin{contactinfo}
-    \href{mailto:tomlie1@mcmaster.ca}{tomlie1@mcmaster.ca} & (905) 537 - 6744
+    \href{mailto:tomlie1@mcmaster.ca}{tomlie1@mcmaster.ca}
+    & (905) 537 - 6744
 \end{contactinfo}
+
 
 %% --- summary ----------------------------------------------------------------------------------------------------
 \begin{resume}
     \resumesection\textbf{Summary}
-    
       &\textbf{Engineering Physics III and Environmental Science}
       \desc Creative and communicative natural leader aspiring to work on challenging open-ended
       problems in teams of high functioning people aligned without ego. Background in full-stack
@@ -51,14 +57,12 @@ Elliot Tomlinson
 
 %% --- education --------------------------------------------------------------------------------------------------
   \resumesection\textbf{Education}
-
       &\textbf{McMaster University}
       \resumedate{2016 -- Present, Class of 2022}
       \desc B. Eng, Engineering Physics (Systems Design Focus), B. Sc. Environmental Science.
 
 %% --- projects ---------------------------------------------------------------------------------------------------
   \resumesection\textbf{Projects}
-
       &\textbf{Self-Stabilizing Quadcopter}
       \resumedate{2021 -- Ongoing}
       \desc Embedded C, CAD, and construction of a drone. Microcontroller PID and Bluetooth
@@ -97,14 +101,12 @@ Elliot Tomlinson
 
 %% --- employment -------------------------------------------------------------------------------------------------
   \resumesection\textbf{Employment}
-
       &\textbf{Town of Oakville, Self}
       \resumedate{2010 -- Ongoing}
       \desc Training lifeguards, teaching swimming, and providing supervision to private events.
 
 %% --- volunteering -----------------------------------------------------------------------------------------------
   \resumesection\textbf{Volunteering}
-
       &\textbf{McMaster University}
       \resumedate{2017 -- Ongoing}
       \desc Providing social and academic support as a tutor, mentor, and frosh-week leader.
@@ -114,13 +116,25 @@ Elliot Tomlinson
 
 %% --- skills -----------------------------------------------------------------------------------------------------
   \resumesection\textbf{Skills}
-
-      &\textbf{Technical}
-      \desc Full-stack design, prototyping, and testing. C, Microcontrollers, MATLAB, Ruby, Python,
-      Microsoft Office Suite, GNU/Linux, \LaTeX, Graphic Design, Autodesk 3D Modelling.
-
-      \\&\textbf{Personal}
+      &\textbf{Personal}
       \desc Effectuation, intrinsic motivation, trans-disciplinarity, creativity, collaboration,
       leadership.
 
-\thispagestyle{empty}\end{resume}\end{center}\end{document}
+      \\&\textbf{Technical}
+      \desc Full-stack design, prototyping, and testing. C, Microcontrollers, MATLAB, Ruby, Python,
+      Microsoft Office Suite, GNU/Linux, \LaTeX, Graphic Design, Autodesk 3D Modelling.
+
+\end{resume}
+
+%% --- footer -----------------------------------------------------------------------------------------------------
+\links
+
+    \href{https://linkedin.com/in/elliottomlinson}  {\faLinkedinSquare\space    elliottomlinson}
+    \href{https://github.com/elliottomlinson}       {\faGithub\space            elliottomlinson}
+    \href{https://elliot.tk}                        {\faLink\space              elliot.tk}
+
+\codenote{\href{https://elliot.tk/resume}{source code available at elliot.tk/resume}}
+
+\thispagestyle{empty}
+\end{center}
+\end{document}
